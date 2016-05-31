@@ -31,10 +31,13 @@ a:focus {
     outline: none;
 }
 label {
-    color: #242a30;
+    color: #FFF;
 }
 
-
+.btn-perso{
+    padding: 0px 0px;
+    font-size: 12px;
+}
 .page-header-fixed {
     padding-top: 54px;
 }
@@ -522,6 +525,13 @@ button.close {
     text-align: right;
 }
 
+.modal-label-frf-black{
+    color: #000000;
+    margin-bottom: 1%;
+    padding-top: 7px;
+    text-align: right;
+}
+
 .buttons {
     cursor: default;
     text-align: center;
@@ -540,6 +550,12 @@ button.close {
 }
 
 .buttons:hover {
+    background: linear-gradient(#800C1F 0%, #800C1F 100%);
+    border-top: 1px solid #800C1F;
+    text-shadow: 0 -1px 1px #800C1F;
+}
+
+.button-click{
     background: linear-gradient(#800C1F 0%, #800C1F 100%);
     border-top: 1px solid #800C1F;
     text-shadow: 0 -1px 1px #800C1F;
@@ -605,6 +621,8 @@ a {
 }
 
 
+
+
 /* 8.1 Theme Panel Setting */
 
 .theme-panel [class*="col-"].ui-sortable,
@@ -614,7 +632,7 @@ a {
 
 .theme-panel {
     position: fixed;
-    right: -175px;
+    right: -300px;
     top: 150px;
     z-index: 1020;
     background: #fff;
@@ -622,7 +640,7 @@ a {
     box-shadow: 0 0 2px rgba(0,0,0,0.4);
     -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.4);
     -moz-box-shadow: 0 0 2px rgba(0,0,0,0.4);
-    width: 175px;
+    width: 300px;
     -webkit-transition: right .2s linear;
     -moz-transition: right .2s linear;
     transition: right .2s linear;
@@ -718,6 +736,133 @@ a {
     line-height: 15px;
 }
 .theme-panel .divider {
+    height: 1px;
+    margin: 15px 0;
+    background: #f2f2f2;
+}
+
+.panel-default {
+    border-color: #FF5B57;
+}
+
+.panel-default > .panel-heading {
+    border-color: #FF5B57;
+}
+
+/*****PANNEAU DE GAUCHE**/
+
+
+.theme-panel2 [class*="col-"].ui-sortable,
+.panel [class*="col-"].ui-sortable {
+    min-height: 0px;
+}
+
+.theme-panel2 {
+    position: fixed;
+    left: -300px;
+    top: 150px;
+    z-index: 1020;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,0.4);
+    width: 300px;
+    -webkit-transition: left .2s linear;
+    -moz-transition: left .2s linear;
+    transition: left .2s linear;
+}
+.theme-panel2.active {
+    left: 0px;
+}
+.theme-panel2 .theme-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.theme-panel2 .theme-list + .theme-list {
+    margin-top: 10px;
+}
+.theme-panel2 .theme-list > li {
+    float: left;
+}
+.theme-panel2 .theme-list > li + li {
+    margin-left: 5px;
+}
+.theme-panel2 .theme-list > li > a {
+    text-decoration: none;
+}
+.theme-panel2 .theme-list > li.active > a  {
+    position: relative;
+}
+.theme-panel2 .theme-list > li.active > a:before {
+    content: '\f00c';
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    text-align: center;
+}
+.theme-panel2 .theme-list > li.active > a.bg-white:before {
+    color: #666;
+}
+.theme-panel2 .theme-list > li > a {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    display: block;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.theme-panel2 .theme-list > li > a:hover,
+.theme-panel2 .theme-list > li > a:focus {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.theme-panel2 .theme-collapse-btn {
+    position: absolute;
+    left: 300px;
+    top: 10%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #333;
+    background: #fff;
+    border-radius: 0 4px 4px 0;
+    text-align: center;
+    box-shadow: -1px 0px 3px -1px rgba(0,0,0,0.4);
+    -webkit-box-shadow: -1px 0px 3px -1px rgba(0,0,0,0.4);
+    -moz-box-shadow: -1px 0px 3px -1px rgba(0,0,0,0.4);
+}
+.theme-panel2 .theme-panel-content {
+    margin: -15px;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    z-index: 1020;
+}
+.theme-panel2.active .theme-collapse-btn .fa:before {
+    content: '\f00d';
+}
+.theme-panel2 .theme-list a.bg-white {
+    border: 1px solid #e2e7eb;
+}
+.theme-panel2 .control-label {
+    line-height: 30px;
+}
+.theme-panel2 .control-label.double-line {
+    line-height: 15px;
+}
+.theme-panel2 .divider {
     height: 1px;
     margin: 15px 0;
     background: #f2f2f2;
